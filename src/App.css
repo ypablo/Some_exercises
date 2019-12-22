@@ -8,6 +8,7 @@ button {
   border-color: black;
   font-size: larger;
   box-shadow: 2px 2px 5px black;
+  margin: 25px;
 }
 
 button:hover{
