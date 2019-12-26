@@ -5,6 +5,7 @@ import Validation from "./components/Validation"
 import Char from "./components/Char"
 import './App.css'
 import { Component } from "react"
+import styled from "styled-components"
 
 class App extends Component {
  constructor() {
@@ -82,7 +83,7 @@ render() {
 
 
   return (
-    <div className="App">
+    <ClassDiv>
       <button onClick={this.toggleShowHandler}>Toggle text</button>
       <UserInput changed={this.nameChangeHandler} value={this.state.username}/>
       <button onClick={() => this.switchNameHandler("Lolek")}>Change name</button>
@@ -105,9 +106,15 @@ render() {
       <p>{this.state.userInput}</p>
       <Validation inputLength={this.state.userInput.length}/>
       {charList}
-    </div>
+    </ClassDiv>
   );
   }
 }
+
+const ClassDiv = styled.div`
+  text-align: center;
+  margin: 2rem auto;
+`
+
 
 export default App;
